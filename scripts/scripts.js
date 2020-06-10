@@ -2,6 +2,13 @@
 const travelApp = {};
 travelApp.apiKey = '9cc67ecf9087aa6234e0f2c7e0e4cde5';
 
+// Listener for when user clicks Start button on modal, fadeout the modal
+travelApp.addStartButton = function() {
+    $('.start').on('click', function() {
+        $('.modalContainer').fadeOut('300');
+    })
+}
+
 // When user changes drop down and submits
 
 // Take the value from the drop down, store it and use it to call getCountryData 
@@ -103,7 +110,7 @@ travelApp.countryData.done(function(item){
 // })
 
 travelApp.init = function() {
-    // Something goes here
+    travelApp.addStartButton();
 }
 
 $(function() {
