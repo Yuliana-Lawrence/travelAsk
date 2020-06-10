@@ -308,6 +308,15 @@ a {
   display: flex;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
+}
+
 /* Mixins */
 .modalContainer {
   height: 100vh;
@@ -334,11 +343,14 @@ a {
   text-align: center;
 }
 
-html {
-  font-size: 62.5%;
+.mainPage {
+  background-color: #fadeba;
+  height: 100vh;
 }
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  min-height: 100vh;
+.mainPage .mainPageContainer {
+  max-width: 90%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 5px;
 }
