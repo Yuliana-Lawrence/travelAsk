@@ -1,6 +1,6 @@
 // Namespace 
 const travelApp = {};
-travelApp.apiKey = '9cc67ecf9087aa6234e0f2c7e0e4cde5';
+travelApp.apiKey = 'apikeyhere';
 
 // Listener for when user clicks Start button on modal, fadeout the modal
 travelApp.addStartButton = function() {
@@ -9,6 +9,17 @@ travelApp.addStartButton = function() {
         $('.modalContainer').fadeOut('300');
         // Changes overflow-y property of body to auto (set to hidden on page load)
         $('body').css('overflow-y', 'auto');
+    })
+}
+
+travelApp.addFooterListener = function() {
+    // Listener to make footer modal visible
+    $('footer').on('click', function() {
+        $('.attributionContainer').addClass('showAttribution');
+    })
+    // Listernt to make footer modal hidden again
+    $('.attributionClose').on('click', function() {
+        $('.attributionContainer').removeClass('showAttribution');
     })
 }
 
@@ -114,6 +125,7 @@ travelApp.countryData.done(function(item){
 
 travelApp.init = function() {
     travelApp.addStartButton();
+    travelApp.addFooterListener();
 }
 
 $(function() {
