@@ -1,0 +1,11 @@
+.mainPage {
+  background-color: $secondary;
+  height: 100vh;
+
+  .mainPageContainer {
+    max-width: 90%;
+    margin: 0 auto;
+    background-color: $light;
+    border-radius: 5px;
+  }
+}
