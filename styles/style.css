@@ -315,6 +315,9 @@ html {
 
 body {
   font-size: 1.4rem;
+  background-image: url("../images/bg-image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: #fadeba;
   font-family: "Open Sans", sans-serif;
   min-height: 100vh;

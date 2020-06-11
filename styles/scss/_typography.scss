@@ -4,6 +4,9 @@ html {
 
 body {
   @include fontSize(14);
+  background-image: url("../images/bg-image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: $secondary;
   font-family: "Open Sans", sans-serif;
   min-height: 100vh;
