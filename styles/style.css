@@ -360,13 +360,13 @@ body {
   line-height: 5.2rem;
 }
 
-.modalBox h1 i {
-  color: lightblue;
-}
-
 .modalBox p {
   line-height: 2rem;
   margin: 1rem 0;
+}
+
+.modalBox i {
+  color: lightblue;
 }
 
 .modalBox button {
@@ -389,7 +389,7 @@ body {
 }
 
 .mainPage {
-  height: calc(100vh - 2rem);
+  height: calc(100vh - 3rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -508,13 +508,24 @@ body {
 }
 
 footer {
-  height: 2rem;
+  height: 3rem;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   text-align: center;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+footer button {
+  background-color: transparent;
+  border: none;
   cursor: pointer;
+}
+
+footer button:focus {
+  border: 1px dotted red;
 }
 
 .attributionContainer {
@@ -541,12 +552,14 @@ footer {
   position: fixed;
   top: 5%;
   left: 95%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .attributionClose i {
   font-size: 3rem;
   color: #fff;
-  cursor: pointer;
 }
 
 .attribution {
@@ -561,7 +574,7 @@ footer {
 
 .attribution ul li {
   display: inline-block;
-  margin: 0.4rem 0;
+  margin: 0.5rem 0.5rem;
 }
 
 .attribution p {

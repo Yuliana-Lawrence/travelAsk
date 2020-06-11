@@ -1,11 +1,20 @@
 footer {
-    height: 2rem;
+    height: 3rem;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     text-align: center;
-    cursor: pointer;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        &:focus {
+            border: 1px dotted red;
+        }
+    }
 }
 
 .attributionContainer {
@@ -26,10 +35,12 @@ footer {
     position: fixed;
     top: 5%;
     left: 95%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
     i {
         font-size: 3rem;
         color: #fff;
-        cursor: pointer;
     }
 }
 
@@ -43,7 +54,7 @@ footer {
     text-align: center;
     ul li {
         display: inline-block;
-        margin: 0.4rem 0;
+        margin: 0.5rem 0.5rem;
     }
     p {
         line-height: 2.2rem;
