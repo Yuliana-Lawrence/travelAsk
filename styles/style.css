@@ -308,16 +308,19 @@ a {
   display: flex;
 }
 
+/* Mixins */
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4rem;
+  background-color: #fadeba;
+  font-family: "Open Sans", sans-serif;
   min-height: 100vh;
+  color: #525252;
 }
 
-/* Mixins */
 .modalContainer {
   height: 100vh;
   width: 100vw;
@@ -344,13 +347,94 @@ body {
 }
 
 .mainPage {
-  background-color: #fadeba;
   height: 100vh;
 }
 
 .mainPage .mainPageContainer {
   max-width: 90%;
-  margin: 0 auto;
+  margin: 100px auto;
   background-color: #fff;
+  border-radius: 10px;
+  padding: 60px 40px;
+}
+
+.mainPage .mainPageContainer .header {
+  margin-bottom: 60px;
+}
+
+.mainPage .mainPageContainer .header h2 {
+  font-size: 2.5rem;
+}
+
+.mainPage .mainPageContainer .header h2 i.fas {
+  color: lightblue;
+}
+
+.mainPage .mainPageContainer .header .flexContainer {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.mainPage .mainPageContainer .header .flexContainer .col40 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+  max-width: 40%;
+}
+
+.mainPage .mainPageContainer .header .flexContainer .mainPageNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.mainPage .main .flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mainPage .main h2 {
+  font-size: 4rem;
+}
+
+.mainPage .main .col50 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  max-width: calc(50% - 40px);
+  margin: 0 20px;
+}
+
+.mainPage .main .mainCountryInfo.flexContainer {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -20px;
+}
+
+.mainPage .main .mainCountryInfo.flexContainer .col50 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  max-width: calc(50% - 40px);
+  margin: 20px;
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.mainPage .main .mainWeather {
+  border: 1px solid lightblue;
+  padding: 20px;
+  margin-top: 20px;
   border-radius: 5px;
 }

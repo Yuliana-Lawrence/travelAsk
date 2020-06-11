@@ -1,8 +1,11 @@
 html {
-    font-size: 62.5%;
-  }
-  
-  body {
-    font-family: 'Open Sans', sans-serif;
-    min-height: 100vh;
-  }
+  font-size: 62.5%;
+}
+
+body {
+  @include fontSize(14);
+  background-color: $secondary;
+  font-family: "Open Sans", sans-serif;
+  min-height: 100vh;
+  color: $accent;
+}
