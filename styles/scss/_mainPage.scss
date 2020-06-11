@@ -1,11 +1,79 @@
 .mainPage {
-  background-color: $secondary;
   height: 100vh;
 
   .mainPageContainer {
     max-width: 90%;
-    margin: 0 auto;
+    margin: 100px auto;
     background-color: $light;
-    border-radius: 5px;
+    border-radius: 10px;
+    padding: 60px 40px;
+
+    .header {
+      margin-bottom: 60px;
+
+      h2 {
+        @include fontSize(25);
+
+        i.fas {
+          color: $accent-secondary;
+        }
+      }
+
+      .flexContainer {
+        flex-wrap: wrap;
+
+        .col40 {
+          flex: 0 0 40%;
+          max-width: 40%;
+        }
+
+        .mainPageNav {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          flex: 1 1 auto;
+        }
+      }
+    }
+  }
+
+  .main {
+    .flexContainer {
+      display: flex;
+    }
+
+    h2 {
+      @include fontSize(40);
+    }
+
+    
+    .col50 {
+      flex: 0 1 50%;
+      max-width: calc(50% - 40px);
+      margin: 0 20px;
+    }
+
+    .mainCountryInfo {
+      &.flexContainer {
+        flex-wrap: wrap;
+        margin: 0 -20px;
+
+        .col50 {
+          flex: 0 1 50%;
+          max-width: calc(50% - 40px);
+          margin: 20px;
+          border: 1px solid $accent-secondary;
+          border-radius: 5px;
+          padding: 20px;
+        }
+      }
+    }
+
+    .mainWeather {
+      border: 1px solid $accent-secondary;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
   }
 }
