@@ -1,9 +1,19 @@
 .mainPage {
-  height: 100vh;
+  // Added this to compensate for the space that the footer takes up
+  height: calc(100vh - 2rem);
+
+  // Added this - to center all the items on the page
+  // It takes away the extra scroll that was being added
+  // Let me know how you feel about that
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .mainPageContainer {
-    max-width: 90%;
-    margin: 100px auto;
+    // Switching this around a bit
+    width: 90%;
+    max-width: 1100px;
+    // margin: 100px auto;  < -- Taking this away, and doing it with Flex instead
     background-color: $light;
     border-radius: 10px;
     padding: 60px 40px;
@@ -51,6 +61,20 @@
       flex: 0 1 50%;
       max-width: calc(50% - 40px);
       margin: 0 20px;
+    }
+
+    // Added this so that image stay centered with re-sizing
+    // Image will also now spread to cover like the background
+    .imageHolder {
+      display: flex;
+      justify-content: center;
+      border: 1px solid #fff;
+      border-radius: 5px;
+    }
+
+    .imageHolder img {
+      display: block;
+      object-fit: cover;
     }
 
     .mainCountryInfo {

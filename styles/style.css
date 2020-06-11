@@ -351,15 +351,59 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  width: 80%;
+  max-width: 500px;
+}
+
+.modalBox h1 {
+  font-size: 5rem;
+  line-height: 5.2rem;
+}
+
+.modalBox h1 i {
+  color: lightblue;
+}
+
+.modalBox p {
+  line-height: 2rem;
+  margin: 1rem 0;
+}
+
+.modalBox button {
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  background-color: white;
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: #525252;
+}
+
+.modalBox button:hover, .modalBox button:focus {
+  background-color: lightblue;
+}
+
+.modalBox button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .mainPage {
-  height: 100vh;
+  height: calc(100vh - 2rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .mainPage .mainPageContainer {
-  max-width: 90%;
-  margin: 100px auto;
+  width: 90%;
+  max-width: 1100px;
   background-color: #fff;
   border-radius: 10px;
   padding: 60px 40px;
@@ -422,6 +466,23 @@ body {
   margin: 0 20px;
 }
 
+.mainPage .main .imageHolder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.mainPage .main .imageHolder img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .mainPage .main .mainCountryInfo.flexContainer {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -444,4 +505,70 @@ body {
   padding: 20px;
   margin-top: 20px;
   border-radius: 5px;
+}
+
+footer {
+  height: 2rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.attributionContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.attributionClose {
+  position: fixed;
+  top: 5%;
+  left: 95%;
+}
+
+.attributionClose i {
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.attribution {
+  padding: 5rem;
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  max-width: 1100px;
+  opacity: 1;
+  text-align: center;
+}
+
+.attribution ul li {
+  display: inline-block;
+  margin: 0.4rem 0;
+}
+
+.attribution p {
+  line-height: 2.2rem;
+}
+
+.showAttribution {
+  opacity: 1;
+  pointer-events: all;
 }

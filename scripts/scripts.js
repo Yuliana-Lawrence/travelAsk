@@ -12,6 +12,15 @@ travelApp.addStartButton = function() {
     })
 }
 
+travelApp.addFooterListener = function() {
+    $('footer').on('click', function() {
+        $('.attributionContainer').addClass('showAttribution');
+    })
+    $('.attributionClose').on('click', function() {
+        $('.attributionContainer').removeClass('showAttribution');
+    })
+}
+
 // When user changes drop down and submits
 
 // Take the value from the drop down, store it and use it to call getCountryData 
@@ -114,6 +123,7 @@ travelApp.countryData.done(function(item){
 
 travelApp.init = function() {
     travelApp.addStartButton();
+    travelApp.addFooterListener();
 }
 
 $(function() {
