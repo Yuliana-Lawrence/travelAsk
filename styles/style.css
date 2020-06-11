@@ -401,7 +401,7 @@ body {
           align-items: center;
 }
 
-.mainPage .mainPageContainer {
+.mainPageContainer {
   width: 90%;
   max-width: 1100px;
   background-color: #fff;
@@ -409,31 +409,31 @@ body {
   padding: 60px 40px;
 }
 
-.mainPage .mainPageContainer .header {
+.header {
   margin-bottom: 60px;
 }
 
-.mainPage .mainPageContainer .header h2 {
+.header h2 {
   font-size: 2.5rem;
 }
 
-.mainPage .mainPageContainer .header h2 i.fas {
+.header h2 i.fas {
   color: lightblue;
 }
 
-.mainPage .mainPageContainer .header .flexContainer {
+.flexContainer {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-.mainPage .mainPageContainer .header .flexContainer .col40 {
+.flexContainer .col40 {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 40%;
           flex: 0 0 40%;
   max-width: 40%;
 }
 
-.mainPage .mainPageContainer .header .flexContainer .mainPageNav {
+.flexContainer .mainPageNav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -448,17 +448,17 @@ body {
           flex: 1 1 auto;
 }
 
-.mainPage .main .flexContainer {
+.main .flexContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.mainPage .main h2 {
+.main h2 {
   font-size: 4rem;
 }
 
-.mainPage .main .col50 {
+.main .col50 {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
@@ -466,7 +466,7 @@ body {
   margin: 0 20px;
 }
 
-.mainPage .main .imageHolder {
+.main .imageHolder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -477,19 +477,19 @@ body {
   border-radius: 5px;
 }
 
-.mainPage .main .imageHolder img {
+.main .imageHolder img {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.mainPage .main .mainCountryInfo.flexContainer {
+.mainCountryInfo.flexContainer {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0 -20px;
 }
 
-.mainPage .main .mainCountryInfo.flexContainer .col50 {
+.mainCountryInfo.flexContainer .col50 {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
@@ -500,7 +500,7 @@ body {
   padding: 20px;
 }
 
-.mainPage .main .mainWeather {
+.mainWeather {
   border: 1px solid lightblue;
   padding: 20px;
   margin-top: 20px;
