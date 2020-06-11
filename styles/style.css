@@ -269,6 +269,10 @@ html {
   overflow: hidden;
 }
 
+body {
+  overflow-y: hidden;
+}
+
 .wrapper {
   max-width: 1200px;
   width: 85%;

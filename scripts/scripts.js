@@ -5,7 +5,10 @@ travelApp.apiKey = '9cc67ecf9087aa6234e0f2c7e0e4cde5';
 // Listener for when user clicks Start button on modal, fadeout the modal
 travelApp.addStartButton = function() {
     $('.start').on('click', function() {
+        // Fades out modal to display none
         $('.modalContainer').fadeOut('300');
+        // Changes overflow-y property of body to auto (set to hidden on page load)
+        $('body').css('overflow-y', 'auto');
     })
 }
 
