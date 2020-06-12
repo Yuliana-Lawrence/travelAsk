@@ -13,6 +13,7 @@
   background-color: $primary;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: right;
 }
 
 .modalBox {
@@ -31,7 +32,4 @@
     line-height: 2rem;
     margin: 1rem 0;
   }
-
-  //Added new partial for buttons, you can find all styles in "_button.scss"
-
 }

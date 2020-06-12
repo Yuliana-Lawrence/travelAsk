@@ -32,6 +32,8 @@ footer {
 }
 
 .attributionClose {
+  background-color: transparent;
+  border: none;
   position: fixed;
   top: 5%;
   left: 95%;
@@ -62,4 +64,5 @@ footer {
 .showAttribution {
   opacity: 1;
   pointer-events: all;
+  z-index: 2;
 }
