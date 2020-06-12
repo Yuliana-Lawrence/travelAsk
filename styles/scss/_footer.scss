@@ -18,50 +18,48 @@ footer {
 }
 
 .attributionContainer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    pointer-events: none;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0,0,0,0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .attributionClose {
-    position: fixed;
-    top: 5%;
-    left: 95%;
-    background: transparent;
-    border: none;
+  position: fixed;
+  top: 5%;
+  left: 95%;
+  i {
+    font-size: 3rem;
+    color: #fff;
     cursor: pointer;
-    i {
-        font-size: 3rem;
-        color: #fff;
-    }
+  }
 }
 
 .attribution {
-    padding: 5rem;
-    background: #fff;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    max-width: 1100px;
-    opacity: 1;
-    text-align: center;
-    ul li {
-        display: inline-block;
-        margin: 0.5rem 0.5rem;
-    }
-    p {
-        line-height: 2.2rem;
-    }
+  padding: 5rem;
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: $radius;
+  max-width: 1100px;
+  opacity: 1;
+  text-align: center;
+  ul li {
+    display: inline-block;
+    margin: 0.4rem 0;
+  }
+  p {
+    line-height: 2.2rem;
+  }
 }
 
 .showAttribution {
-    opacity: 1;
-    pointer-events: all;
+  opacity: 1;
+  pointer-events: all;
 }

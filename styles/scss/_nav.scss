@@ -1,0 +1,23 @@
+.mainPageNav {
+  form {
+    display: flex;
+
+    .btn,
+    select {
+      margin: 0 10px;
+    }
+  }
+
+  // Added custom styles for the select element and removed the default :)
+  select {
+    appearance: none;
+    background-image: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png);
+    border: 2px double $primary;
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    width: 70%;
+    border-radius: $radius;
+  }
+}
