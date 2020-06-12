@@ -352,7 +352,6 @@ body {
   transition: all 250ms ease-in-out;
   font-size: 1.6rem;
   z-index: 1;
-  /* I added an overlay effect for buttons along with transition :) */
 }
 
 .btn::after {
@@ -471,22 +470,6 @@ body {
   padding: 60px 40px;
 }
 
-.header {
-  margin-bottom: 60px;
-}
-
-.header h2 {
-  font-size: 2.5rem;
-}
-
-.mainPageContainer {
-  width: 90%;
-  max-width: 1100px;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 60px 40px;
-}
-
 .mainPageContainer .header {
   margin-bottom: 60px;
 }
@@ -533,6 +516,7 @@ body {
 
 .mainContainer h2 {
   font-size: 4rem;
+  margin-bottom: 30px;
 }
 
 .mainContainer .col50 {
@@ -595,15 +579,43 @@ body {
 }
 
 .mainCountryInfo.flexContainer .col50 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
   max-width: calc(50% - 40px);
   margin: 20px;
-  border: 1px solid lightblue;
-  padding: 20px;
-  margin-top: 20px;
+  border: 2px double lightblue;
   border-radius: 5px;
+  height: 80px;
+}
+
+.mainCountryInfo .countryInfo p {
+  margin-bottom: 10px;
+}
+
+.mainCountryInfo .countryInfo {
+  position: relative;
+}
+
+.mainCountryInfo .countryInfo p {
+  position: absolute;
+  top: -25px;
+  left: 10px;
+}
+
+.mainCountryInfo .countryInfo span {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .mainWeather {
