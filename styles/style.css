@@ -423,6 +423,7 @@ body {
   background-color: #f6c346;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: right;
 }
 
 .modalBox {
@@ -440,36 +441,17 @@ body {
   line-height: 5.2rem;
 }
 
+.modalBox h1 i {
+  color: lightblue;
+}
+
 .modalBox p {
   line-height: 2rem;
   margin: 1rem 0;
 }
 
-.modalBox i {
-  color: lightblue;
-}
-
-.modalBox button {
-  padding: 1rem 2rem;
-  font-size: 2rem;
-  background-color: white;
-  border: 1px solid lightblue;
-  border-radius: 5px;
-  text-transform: uppercase;
-  color: #525252;
-}
-
-.modalBox button:hover, .modalBox button:focus {
-  background-color: lightblue;
-}
-
-.modalBox button:active {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-}
-
 .mainPage {
-  height: calc(100vh - 3rem);
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -497,26 +479,39 @@ body {
   font-size: 2.5rem;
 }
 
-.header h2 i.fas {
+.mainPageContainer {
+  width: 90%;
+  max-width: 1100px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 60px 40px;
+}
+
+.mainPageContainer .header {
+  margin-bottom: 60px;
+}
+
+.mainPageContainer .header h2 {
+  font-size: 2.5rem;
+}
+
+.mainPageContainer .header i.fas {
   color: lightblue;
 }
 
-.mainPage .mainPageContainer .header .flexContainer {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.mainPageContainer .flexContainer {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-.flexContainer .col40 {
+.mainPageContainer .flexContainer .col40 {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 40%;
           flex: 0 0 40%;
   max-width: 40%;
 }
 
-.flexContainer .mainPageNav {
+.mainPageContainer .flexContainer .mainPageNav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -531,17 +526,16 @@ body {
           flex: 1 1 auto;
 }
 
-.main .flexContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.mainContainer {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.main h2 {
+.mainContainer h2 {
   font-size: 4rem;
 }
 
-.main .col50 {
+.mainContainer .col50 {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
@@ -549,7 +543,7 @@ body {
   margin: 0 20px;
 }
 
-.main .imageHolder {
+.mainContainer .imageHolder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -560,7 +554,35 @@ body {
   border-radius: 5px;
 }
 
-.main .imageHolder img {
+.mainCountryInfo.flexContainer {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -20px;
+}
+
+.mainCountryInfo.flexContainer .col50 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  max-width: calc(50% - 40px);
+  margin: 20px;
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.imageHolder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.imageHolder img {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
@@ -579,8 +601,9 @@ body {
   max-width: calc(50% - 40px);
   margin: 20px;
   border: 1px solid lightblue;
-  border-radius: 5px;
   padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
 }
 
 .mainWeather {
@@ -632,17 +655,17 @@ footer button:focus {
 }
 
 .attributionClose {
+  background-color: transparent;
+  border: none;
   position: fixed;
   top: 5%;
   left: 95%;
-  background: transparent;
-  border: none;
-  cursor: pointer;
 }
 
 .attributionClose i {
   font-size: 3rem;
   color: #fff;
+  cursor: pointer;
 }
 
 .attribution {
@@ -657,7 +680,7 @@ footer button:focus {
 
 .attribution ul li {
   display: inline-block;
-  margin: 0.5rem 0.5rem;
+  margin: 0.4rem 0;
 }
 
 .attribution p {
@@ -667,4 +690,36 @@ footer button:focus {
 .showAttribution {
   opacity: 1;
   pointer-events: all;
+  z-index: 2;
+}
+
+@media (max-width: 850px) {
+  .mainPageContainer .header {
+    margin-top: 60px;
+  }
+  .mainContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .mainContainer .col50 {
+    max-width: 100%;
+  }
+  .mainContainer .imageHolder {
+    margin: 0 20px 40px;
+  }
+}
+
+@media (max-width: 800px) {
+  .header .flexContainer,
+  .mainPageContainer .flexContainer .mainPageNav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 20px;
+  }
+  .header h2 {
+    text-align: center;
+  }
 }
