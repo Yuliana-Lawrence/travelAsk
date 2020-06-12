@@ -14,7 +14,7 @@ travelApp.addStartButton = function() {
 
 travelApp.addFooterListener = function() {
     // Listener to make footer modal visible
-    $('footer').on('click', function() {
+    $('footer button').on('click', function() {
         $('.attributionContainer').addClass('showAttribution');
     })
     // Listernt to make footer modal hidden again
