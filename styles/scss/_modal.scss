@@ -7,9 +7,7 @@
   top: 0;
   left: 0;
   z-index: 10;
-  // Replaced linear-gradient with the bg-image
   background-image: url("../images/modal-bg1.png");
-  // Set the fallback color in case image fails to load
   background-color: $primary;
   background-repeat: no-repeat;
   background-size: cover;
@@ -31,7 +29,4 @@
     line-height: 2rem;
     margin: 1rem 0;
   }
-
-  //Added new partial for buttons, you can find all styles in "_button.scss"
-
 }

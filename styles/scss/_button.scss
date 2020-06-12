@@ -15,7 +15,6 @@
   @include fontSize(16);
   z-index: 1;
 
-  /* I added an overlay effect for buttons along with transition :) */
   &::after {
     content: "";
     position: absolute;

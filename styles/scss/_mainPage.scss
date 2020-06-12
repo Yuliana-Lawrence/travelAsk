@@ -48,6 +48,7 @@
 
     h2 {
       @include fontSize(40);
+      margin-bottom: 30px;
     }
 
     .col50 {
@@ -74,21 +75,44 @@
         margin: 0 -20px;
 
         .col50 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
           flex: 0 1 50%;
           max-width: calc(50% - 40px);
           margin: 20px;
-          border: 1px solid $accent-secondary;
+          border: 2px double $accent-secondary;
           border-radius: $radius;
-          padding: 20px;
+          height: 80px;
+        }
+      }
+
+      .countryInfo p {
+        margin-bottom: 10px;
+      }
+
+      .countryInfo {
+        position: relative;
+
+        p {
+          position: absolute;
+          top: -25px;
+          left: 10px;
+        }
+
+        span {
+          @include fontSize(18);
+          text-transform: uppercase;
+          font-weight: bold;
         }
       }
     }
 
     .mainWeather {
-      border: 1px solid $accent-secondary;
       padding: 20px;
       margin-top: 20px;
       border-radius: $radius;
+      border: 2px double $accent-secondary;
     }
   }
 }
