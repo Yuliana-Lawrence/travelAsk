@@ -1,6 +1,6 @@
 // Namespace 
 const travelApp = {};
-travelApp.apiKey = '9cc67ecf9087aa6234e0f2c7e0e4cde5';
+travelApp.apiKey = 'key';
 travelApp.countryName = $('.country');
 travelApp.capitalName = $('.capital');
 travelApp.language = $('.language');
