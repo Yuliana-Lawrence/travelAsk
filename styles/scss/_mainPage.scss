@@ -47,12 +47,24 @@
     margin-bottom: 30px;
   }
 
-  .imageHolder {
-    display: flex;
-    justify-content: center;
-    border: 1px solid #fff;
-    border-radius: $radius;
+  .col50 {
+    flex: 0 1 50%;
+    max-width: calc(50% - 40px);
+    margin: 0 20px;
   }
+}
+
+.imageHolder {
+  display: flex;
+  justify-content: center;
+  border: 1px solid $accent-secondary;
+  border-radius: $radius;
+  opacity: 0.7;
+}
+
+.imageHolder img {
+  display: block;
+  object-fit: cover;
 }
 
 .mainCountryInfo {
@@ -66,18 +78,6 @@
       padding: 20px;
     }
   }
-}
-
-.imageHolder {
-  display: flex;
-  justify-content: center;
-  border: 1px solid #fff;
-  border-radius: 5px;
-}
-
-.imageHolder img {
-  display: block;
-  object-fit: cover;
 }
 
 .mainCountryInfo {
