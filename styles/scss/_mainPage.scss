@@ -1,8 +1,6 @@
 .mainPage {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include centerFlex();
 }
 
 .mainPageContainer {
@@ -18,10 +16,12 @@
     h2 {
       @include fontSize(25);
     }
+
     i.fas {
       color: $accent-secondary;
     }
   }
+
   .flexContainer {
     flex-wrap: wrap;
 
@@ -73,9 +73,6 @@
     margin: 0 -20px;
 
     .col50 {
-      flex: 0 1 50%;
-      max-width: calc(50% - 40px);
-      margin: 20px;
       border: 1px solid $accent-secondary;
       border-radius: $radius;
       padding: 20px;
@@ -89,13 +86,11 @@
     margin: 0 -20px;
 
     .col50 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include centerFlex();
       flex: 0 1 50%;
       max-width: calc(50% - 40px);
       margin: 20px;
-      border: 2px double $accent-secondary;
+      border: 3px double $accent-secondary;
       border-radius: $radius;
       height: 80px;
     }
@@ -123,8 +118,32 @@
 }
 
 .mainWeather {
-  border: 1px solid $accent-secondary;
-  padding: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: 3px double $accent-secondary;
   margin-top: 20px;
   border-radius: 5px;
+  height: 60px;
+
+  .weather,
+  .temp {
+    display: inline-block;
+    margin-left: 30px;
+  }
+
+  .temp {
+    color: $yellow;
+    @include fontSize(16);
+    font-weight: 900;
+  }
+
+  i.fa-cloud-sun {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    opacity: 0.6;
+    transform: translateY(-50%);
+    @include fontSize(25);
+  }
 }

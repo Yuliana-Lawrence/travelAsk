@@ -1,5 +1,11 @@
 /* Mixins */
 
 @mixin fontSize($size-value) {
-    font-size: ($size-value / 10) * 1rem;
+  font-size: ($size-value / 10) * 1rem;
+}
+
+@mixin centerFlex() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

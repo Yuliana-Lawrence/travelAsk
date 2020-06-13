@@ -318,6 +318,14 @@ a {
           flex: 1 1 auto;
 }
 
+.col50 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  max-width: calc(50% - 40px);
+  margin: 0 20px;
+}
+
 /* Mixins */
 html {
   font-size: 62.5%;
@@ -325,7 +333,7 @@ html {
 
 body {
   font-size: 1.4rem;
-  background-image: url("../images/bg-image.png");
+  background-image: url("../assets/bg-image.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #fadeba;
@@ -350,8 +358,10 @@ body {
   cursor: pointer;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
+  color: #525252;
   font-size: 1.6rem;
   z-index: 1;
+  font-weight: 600;
 }
 
 .btn::after {
@@ -396,18 +406,24 @@ body {
      -moz-appearance: none;
           appearance: none;
   background-image: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png);
-  border: 2px double #f6c346;
+  border: 3px double #f6c346;
   background-repeat: no-repeat;
   background-position: 90% center;
   text-transform: uppercase;
   padding: 10px 25px;
   width: 70%;
   border-radius: 5px;
+  color: #525252;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
 }
 
 .modalContainer {
   height: 100vh;
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -418,7 +434,7 @@ body {
   top: 0;
   left: 0;
   z-index: 10;
-  background-image: url("../images/modal-bg1.png");
+  background-image: url("../assets/modal-bg1.png");
   background-color: #f6c346;
   background-repeat: no-repeat;
   background-size: cover;
@@ -552,11 +568,6 @@ body {
 }
 
 .mainCountryInfo.flexContainer .col50 {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
-  max-width: calc(50% - 40px);
-  margin: 20px;
   border: 1px solid lightblue;
   border-radius: 5px;
   padding: 20px;
@@ -583,7 +594,7 @@ body {
           flex: 0 1 50%;
   max-width: calc(50% - 40px);
   margin: 20px;
-  border: 2px double lightblue;
+  border: 3px double lightblue;
   border-radius: 5px;
   height: 80px;
 }
@@ -609,10 +620,39 @@ body {
 }
 
 .mainWeather {
-  border: 1px solid lightblue;
-  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  border: 3px double lightblue;
   margin-top: 20px;
   border-radius: 5px;
+  height: 60px;
+}
+
+.mainWeather .weather,
+.mainWeather .temp {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.mainWeather .temp {
+  color: #f2a83c;
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.mainWeather i.fa-cloud-sun {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  opacity: 0.6;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 2.5rem;
 }
 
 footer {

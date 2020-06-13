@@ -7,16 +7,19 @@
       margin: 0 10px;
     }
   }
-  
+
   select {
     appearance: none;
     background-image: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png);
-    border: 2px double $primary;
+    border: 3px double $primary;
     background-repeat: no-repeat;
     background-position: 90% center;
     text-transform: uppercase;
     padding: 10px 25px;
     width: 70%;
     border-radius: $radius;
+    color: $accent;
+    @include fontSize(16);
+    letter-spacing: 1px;
   }
 }
