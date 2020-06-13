@@ -9,57 +9,78 @@ travelApp.populationNumb = $('.population');
 travelApp.countryInfo = $('.countryInfo');
 travelApp.weather = $('.weather');
 travelApp.temp = $('.temp');
+travelApp.image = $('.countryImage');
 
 // Changed array to an object for easier property access
 travelApp.destination = {
     "Canada": {
         lat: 45.4215,
-        long: -75.6972
+        long: -75.6972,
+        imageUrl: "./assets/canada.jpg",
+        imageAlt: "A shiny lake surrounded by trees and snow capped mountains"
     },
 
     "Italy": {
         lat: 41.9028,
-        long: 12.4964
+        long: 12.4964,
+        imageUrl: "./assets/italy.jpg",
+        imageAlt: "A small alley lined with colourful homes and various house plants"
     },
 
     "Belgium": {
         lat: 50.8503,
-        long: 4.3517
+        long: 4.3517,
+        imageUrl: "./assets/belgium.jpg",
+        imageAlt: "Various buildings in front of a shorline"
     },
 
     "Netherlands": {
         lat: 52.3667,
-        long: 4.8945
+        long: 4.8945,
+        imageUrl: "./assets/netherlands.jpg",
+        imageAlt: "Various buildings, trees and boats lined along a river"
     },
 
     "Costa Rica": {
         lat: 9.9281,
-        long: -84.0907
+        long: -84.0907,
+        imageUrl: "./assets/costarica.jpg",
+        imageAlt: "A small waterfall centered in a luscious green rain forest"
     },
 
     "Croatia": {
         lat: 18.1248,
-        long: 15.9819
+        long: 15.9819,
+        imageUrl: "./assets/croatia.jpg",
+        imageAlt: "Aerial view of a waterfront surrounded by buildings with orange roofs"
     },
 
     "Fiji": {
         lat: 18.1248,
-        long: 178.4501
+        long: 178.4501,
+        imageUrl: "./assets/fiji.jpg",
+        imageAlt: "A sunny beach with, turqouise waters and white sand in Fiji"
     },
 
     "Japan": {
         lat: 35.6762,
-        long: 139.6503
+        long: 139.6503,
+        imageUrl: "./assets/japan.jpg",
+        imageAlt: "A japanese storefront surrounded by signs written in japanese"
     },
 
     "Australia": {
         lat: -35.2809,
-        long: 149.1300
+        long: 149.1300,
+        imageUrl: "./assets/australia.jpg",
+        imageAlt: "A waterfront active with boats and buildings in the background"
     },
 
     "Jamaica": {
         lat: 44.2312,
-        long: -76.4860
+        long: -76.4860,
+        imageUrl: "./assets/jamaica.jpg",
+        imageAlt: "A small boat surrounded by turquoise water and sandy beaches"
     }
 };
 
@@ -74,6 +95,7 @@ travelApp.addStartButton = function () {
     })
 }
 
+// Listener for when user clicks on footer button to show attribution and credits
 travelApp.addFooterListener = function () {
     // Listener to make footer modal visible
     $('footer button').on('click', function() {
@@ -104,8 +126,11 @@ travelApp.addFormListener = function () {
             this.currency.text(currencies[0].code);
             this.populationNumb.text(population);
 
-            // Take the value from the drop down, use to reference lat and long from object, store that in a variable and call getCountryWeather
-            const { lat, long } = this.destination[optionValue];
+            // Take the value from the drop down, use to reference lat and long (and Image info, for immediate use) from object, store that in a variable and call getCountryWeather
+            const { lat, long, imageUrl, imageAlt } = this.destination[optionValue];
+
+            // Set the image src and alt to those matching in the destination object
+            this.image.attr('src', imageUrl).attr('alt', imageAlt);
 
             this.getCountryWeather(lat, long).then(result => {
                 const currently = result.currently;
@@ -117,31 +142,37 @@ travelApp.addFormListener = function () {
     })
 }
 
-
+// Shortened to remove setting a variable, can immediately return promise
 travelApp.getCountryData = function (countryName) {
-    const countryPromise = $.ajax({
+    return $.ajax({
         url: `https://restcountries.eu/rest/v2/name/${countryName}`,
         method: 'GET',
         dataType: 'JSON'
     })
-    return countryPromise;
 }
 
-
+// Shortened to remove setting a variable, can immediately return promise
 travelApp.getCountryWeather = function (lat, long) {
-    const weatherPromise = $.ajax({
+    return $.ajax({
         url: `https://api.darksky.net/forecast/${travelApp.apiKey}/${lat},${long}`,
         method: 'GET',
         dataType: 'JSONP'
     })
-    return weatherPromise;
 }
 
+// "Home" button on the app to reload the entire page
+travelApp.restartApp = function () {
+    $('.homeButton').on('click', function (e) {
+        e.preventDefault();
+        location.reload();
+    })
+}
 
 travelApp.init = function () {
     this.addStartButton();
     this.addFooterListener();
     this.addFormListener();
+    this.restartApp();
 }
 
 $(function () {
