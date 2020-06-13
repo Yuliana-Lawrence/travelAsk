@@ -1,7 +1,7 @@
 // Below laptop
 @media (max-width: 850px) {
-    .mainPageContainer .header {
-        margin-top: 60px;
+    .mainPage {
+        height: auto;
     }
 
     .mainContainer {
@@ -15,6 +15,11 @@
     .mainContainer .imageHolder {
         margin: 0 20px 40px;
     }
+
+    footer {
+        position: static;
+        margin-top: 20px;
+    }
 }
 
 @media (max-width: 800px) {
@@ -27,4 +32,16 @@
     .header h2 {
         text-align: center;
     }
+
+    .attributionClose {
+        left: 85%;
+    }
+}
+
+@media (max-width: 550px) {
+    .mainPageContainer {
+        padding: 0 0 20px 0;
+        width: 100%;
+    }
+
 }
