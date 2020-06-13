@@ -1,12 +1,14 @@
 // Namespace 
 const travelApp = {};
-travelApp.apiKey = 'key';
+travelApp.apiKey = '9cc67ecf9087aa6234e0f2c7e0e4cde5';
 travelApp.countryName = $('.country');
 travelApp.capitalName = $('.capital');
 travelApp.language = $('.language');
 travelApp.currency = $('.currency');
 travelApp.populationNumb = $('.population');
 travelApp.countryInfo = $('.countryInfo');
+travelApp.weather = $('.weather');
+travelApp.temp = $('.temp');
 
 // Changed array to an object for easier property access
 travelApp.destination = {
@@ -36,13 +38,13 @@ travelApp.destination = {
     },
 
     "Croatia": {
-        lat: 45.8150,
+        lat: 18.1248,
         long: 15.9819
     },
 
-    "United Kingdom": {
-        lat: 51.5074,
-        long: -0.1278
+    "Fiji": {
+        lat: 18.1248,
+        long: 178.4501
     },
 
     "Japan": {
@@ -106,7 +108,10 @@ travelApp.addFormListener = function () {
             const { lat, long } = this.destination[optionValue];
 
             this.getCountryWeather(lat, long).then(result => {
-                console.log(result);
+                const currently = result.currently;
+
+                this.weather.text(`Weather in ${capital}: ${currently.icon}`);
+                this.temp.text(currently.temperature);
             })
         })
     })

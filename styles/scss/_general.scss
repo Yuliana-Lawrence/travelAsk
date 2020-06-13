@@ -42,3 +42,9 @@ a {
 .flexAuto {
   flex: 1 1 auto;
 }
+
+.col50 {
+  flex: 0 1 50%;
+  max-width: calc(50% - 40px);
+  margin: 0 20px;
+}

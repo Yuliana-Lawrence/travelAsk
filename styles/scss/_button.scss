@@ -12,8 +12,10 @@
   padding: 1.3rem 2rem;
   cursor: pointer;
   transition: all 250ms ease-in-out;
+  color: $accent;
   @include fontSize(16);
   z-index: 1;
+  font-weight: 600;
 
   &::after {
     content: "";

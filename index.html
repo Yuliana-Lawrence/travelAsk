@@ -11,10 +11,14 @@
 </head>
 
 <body>
-    <div class="modalContainer flexContainer">
+    
+    <div class="modalContainer">
         <div class="modalBox">
             <h1>travelAsk <i class="fas fa-map-marker-alt"></i></h1>
-            <p>What if you could track down all of the most imporatnt information about your travel destination in one place? With travelAsk <i class="fas fa-map-marker-alt"></i> you can get all the most imporant details about your possible destination all in one place, at the click of a button. Click Start to, get started.</p>
+            <p>What if you could track down all of the most imporatnt information about your travel destination in one
+                place? With travelAsk <i class="fas fa-map-marker-alt"></i> you can get all the most imporant details
+                about your possible destination all in one place, at the click of a button. Click Start to, get started.
+            </p>
             <button class="btn start">Start</button>
         </div>
     </div>
@@ -30,13 +34,14 @@
                         <form action="">
                             <label class="sr-only" for="country">Choose country:</label>
                             <select name="country" id="country">
+                                <option selected disabled>Choose country</option>
                                 <option value="Canada">Canada</option>
                                 <option value="Italy">Italy</option>
                                 <option value="Belgium">Belgium</option>
                                 <option value="Netherlands">Netherlands</option>
                                 <option value="Costa Rica">Costa Rica</option>
                                 <option value="Croatia">Croatia</option>
-                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="Fiji">Fiji</option>
                                 <option value="Japan">Japan</option>
                                 <option value="Australia">Australia</option>
                                 <option value="Jamaica">Jamaica</option>
@@ -55,7 +60,7 @@
                         </div>
                         <div>
                             <ul class="mainCountryInfo flexContainer">
-                                <li class="countryInfo col50">
+                                <li class="countryInfo bgLight col50">
                                     <p>Capital:</p>
                                     <span class="capital"></span>
                                 </li>
@@ -74,11 +79,13 @@
                             </ul>
                         </div>
                         <div class="mainWeather">
-                            <p>weather</p>
+                            <span class="weather"></span>
+                            <span class="temp"></span>
+                            <i class="fas fa-cloud-sun"></i>
                         </div>
                     </div>
                     <div class="col50 imageHolder">
-                        <img src="./images/ian-dooley-DuBNA1QMpPA-unsplash.jpg" alt="">
+                        <img src="./assets/ian-dooley-DuBNA1QMpPA-unsplash.jpg" alt="">
                     </div>
                 </div>
             </main>
@@ -114,12 +121,14 @@
     </div>
 
     <footer>
-        <button><p>Created by Yuliana Hazda & Lawrence Hebia</p></button>
+        <button>
+            <p>Created by Yuliana Hazda & Lawrence Hebia</p>
+        </button>
     </footer>
 
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'
         integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
-    <script src="scripts/scripts.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>
