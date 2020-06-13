@@ -1,5 +1,15 @@
 // Below laptop
-@media (max-width: 850px) {
+@media (max-width: 868px) {
+    .header .flexContainer,
+    .mainPageContainer .flexContainer .mainPageNav {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .header h2 {
+        text-align: center;
+    }
+
     .mainPage {
         height: auto;
     }
@@ -23,15 +33,6 @@
 }
 
 @media (max-width: 800px) {
-    .header .flexContainer,
-    .mainPageContainer .flexContainer .mainPageNav {
-        justify-content: center;
-        margin-top: 20px;
-    }
-
-    .header h2 {
-        text-align: center;
-    }
 
     .attributionClose {
         left: 85%;
