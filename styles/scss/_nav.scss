@@ -2,10 +2,16 @@
   form {
     display: flex;
 
-    .btn,
-    select {
-      margin: 0 10px;
+    @include tablet-portrait-sm {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
     }
+  }
+
+  .btn,
+  select {
+    margin: 0 10px;
   }
 
   select {
@@ -21,5 +27,15 @@
     color: $accent;
     @include fontSize(16);
     letter-spacing: 1px;
+
+    @include tablet-portrait-sm {
+      margin: 20px;
+      padding: 20px 25px;
+    }
+
+    @include phone {
+      width: 100%;
+      margin: 0 0 20px;
+    }
   }
 }

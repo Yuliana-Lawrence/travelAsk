@@ -1,11 +1,13 @@
 @import "setup";
-@import "general";
-@import "variables";
 @import "mixins";
+@import "variables";
+@import "general";
 @import "typography";
 @import "button";
 @import "nav";
 @import "modal";
 @import "mainPage";
 @import "footer";
-@import "mediaqueries";
+
+// Removed import, instead added media queries straight into selected elements
+// @import "mediaqueries";
