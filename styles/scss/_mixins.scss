@@ -9,3 +9,47 @@
   justify-content: center;
   align-items: center;
 }
+
+/* Responsive web design breakpoints*/
+$screen-xxl: 1150px;
+$screen-xl: 1115px;
+$screen-md: 840px;
+$screen-sm: 660px;
+$screen-xs: 500px;
+$screen-xxs: 340px;
+
+@mixin tablet-landscape {
+  @media only screen and(max-width: $screen-xxl) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape-sm {
+  @media only screen and (max-width: $screen-xl) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait {
+  @media only screen and(max-width: $screen-md) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait-sm {
+  @media only screen and(max-width: $screen-sm) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media only screen and(max-width: $screen-xs) {
+    @content;
+  }
+}
+
+@mixin phone-xxs {
+  @media only screen and(max-width: $screen-xxs) {
+    @content;
+  }
+}

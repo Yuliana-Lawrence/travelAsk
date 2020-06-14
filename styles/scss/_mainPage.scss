@@ -1,6 +1,10 @@
 .mainPage {
   height: 100vh;
   @include centerFlex();
+
+  @include tablet-landscape {
+    height: auto;
+  }
 }
 
 .mainPageContainer {
@@ -14,11 +18,19 @@
     margin-bottom: 60px;
 
     h2 {
-      @include fontSize(25);
+      @include fontSize(30);
     }
 
     i.fas {
       color: $accent-secondary;
+    }
+
+    @include tablet-landscape {
+      margin-bottom: 30px;
+    }
+
+    @include tablet-portrait {
+      width: 100%;
     }
   }
 
@@ -26,8 +38,8 @@
     flex-wrap: wrap;
 
     .col40 {
-      flex: 0 0 40%;
-      max-width: 40%;
+      display: flex;
+      align-items: center;
     }
 
     .mainPageNav {
@@ -35,7 +47,21 @@
       justify-content: flex-end;
       align-items: center;
       flex: 1 1 auto;
+
+      @include tablet-landscape-sm {
+        justify-content: center;
+      }
     }
+  }
+
+  @include phone {
+    padding: 60px 30px;
+    width: 85%;
+  }
+
+  @include phone-xxs {
+    padding: 30px 15px;
+    width: 90%;
   }
 }
 
@@ -45,12 +71,29 @@
   h2 {
     @include fontSize(40);
     margin-bottom: 30px;
+
+    @include phone {
+      @include fontSize(30);
+      margin: 30px 0;
+    }
   }
 
-  .col50 {
-    flex: 0 1 50%;
-    max-width: calc(50% - 40px);
-    margin: 0 20px;
+  @include tablet-landscape {
+    width: 70%;
+  }
+
+  @include tablet-landscape {
+    &.flexContainer {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  @include tablet-landscape {
+    .col50 {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
   }
 }
 
@@ -60,6 +103,7 @@
   border: 1px solid $accent-secondary;
   border-radius: $radius;
   opacity: 1;
+  overflow: hidden;
 }
 
 .imageHolder img {
@@ -75,7 +119,16 @@
     .col50 {
       border: 1px solid $accent-secondary;
       border-radius: $radius;
-      padding: 20px;
+
+      @include phone {
+        max-width: calc(50% - 20px);
+        margin: 20px 10px;
+        height: 70px;
+      }
+    }
+
+    @include phone {
+      margin: 0 -10px;
     }
   }
 }
@@ -87,17 +140,23 @@
 
     .col50 {
       @include centerFlex();
-      flex: 0 1 50%;
-      max-width: calc(50% - 40px);
-      margin: 20px;
       border: 3px double $accent-secondary;
       border-radius: $radius;
       height: 80px;
-    }
-  }
 
-  .countryInfo p {
-    margin-bottom: 10px;
+      @include tablet-landscape {
+        flex-basis: 50%;
+        max-width: calc(50% - 40px);
+      }
+
+      @include phone {
+        max-width: calc(50% - 20px);
+      }
+    }
+
+    @include phone {
+      margin: -10px;
+    }
   }
 
   .countryInfo {
@@ -107,12 +166,21 @@
       position: absolute;
       top: -25px;
       left: 10px;
+      margin-bottom: 10px;
     }
 
     span {
       @include fontSize(18);
       text-transform: uppercase;
       font-weight: bold;
+
+      @include tablet-portrait-sm {
+        @include fontSize(16);
+      }
+
+      @include phone {
+        @include fontSize(13);
+      }
     }
   }
 }
@@ -145,5 +213,43 @@
     opacity: 0.6;
     transform: translateY(-50%);
     @include fontSize(25);
+  }
+
+  @include tablet-portrait-sm {
+    margin: 20px 0;
+    padding: 15px;
+
+    .weather,
+    .temp {
+      margin: 0;
+    }
+
+    .temp {
+      margin-left: 10px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -12px;
+      right: 20px;
+      width: 70px;
+      height: 20px;
+      background-color: $light;
+    }
+
+    i.fa-cloud-sun {
+      top: -20px;
+      right: 35px;
+      opacity: 0.6;
+      transform: unset;
+      z-index: 1;
+    }
+  }
+}
+
+@include tablet-portrait-sm {
+  .main {
+    border-top: 1px solid $accent-secondary;
   }
 }

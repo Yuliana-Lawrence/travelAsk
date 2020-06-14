@@ -33,6 +33,7 @@ p {
 a {
   display: inline-block;
   text-decoration: none;
+  color: black;
 }
 
 .flexContainer {
@@ -43,8 +44,28 @@ a {
   flex: 1 1 auto;
 }
 
+.col40 {
+  flex: 0 0 40%;
+  max-width: 40%;
+
+  @include tablet-landscape {
+    text-align: left;
+  }
+
+  @include tablet-landscape-sm {
+    flex-basis: 100%;
+    max-width: 100%;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
 .col50 {
   flex: 0 1 50%;
   max-width: calc(50% - 40px);
-  margin: 0 20px;
+  margin: 20px;
+
+  @include phone {
+    margin: 0;
+  }
 }
