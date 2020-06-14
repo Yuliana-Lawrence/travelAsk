@@ -25,12 +25,7 @@ footer {
   pointer-events: none;
   width: 100vw;
   height: 100vh;
-
-  // Used mixin which replaces flex properties bellow, so flex styles are icluded in centerFlex() mixin
   @include centerFlex();
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
