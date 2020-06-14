@@ -5,4 +5,4 @@
 - Lawrence Hebia
 - Yuliana Hazda
 
-(https://yuliana-lawrence.github.io/travelAsk/)
+https://yuliana-lawrence.github.io/travelAsk/
