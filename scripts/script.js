@@ -84,7 +84,6 @@ travelApp.destination = {
     }
 };
 
-
 // Listener for when user clicks Start button on modal, fadeout the modal
 travelApp.addStartButton = function () {
     $('.start').on('click', function () {
@@ -136,12 +135,24 @@ travelApp.addFormListener = function () {
                 const currently = result.currently;
 
                 this.weather.text(`Weather in ${capital}: ${currently.icon}`);
-                this.temp.text(currently.temperature);
+                // Convert temp to celcius
+                const toCelcius = (currently.temperature - 32) * 5 / 9;
+                // Used .html to be able to use html syntax
+                this.temp.html(`<p>${toCelcius.toFixed(2)}&#176;C</p>`);
+
+            // IF DarkSky API returns error, advise user of weather database error in weather container
+            }, weatherError => {
+                this.weather.text(`Weather database error.`);
             })
+
+        // IF API returns error, change country name to advise user error has occurred
+        }, countryError => {
+            this.countryName.text('Country database error');
         })
     })
 }
 
+// Rest countries API call
 // Shortened to remove setting a variable, can immediately return promise
 travelApp.getCountryData = function (countryName) {
     return $.ajax({
@@ -151,6 +162,7 @@ travelApp.getCountryData = function (countryName) {
     })
 }
 
+// Darky sky API call
 // Shortened to remove setting a variable, can immediately return promise
 travelApp.getCountryWeather = function (lat, long) {
     return $.ajax({
@@ -161,7 +173,7 @@ travelApp.getCountryWeather = function (lat, long) {
 }
 
 // "Home" button on the app to reload the entire page
-travelApp.restartApp = function () {
+travelApp.addRestartListener = function () {
     $('.homeButton').on('click', function (e) {
         e.preventDefault();
         location.reload();
@@ -172,7 +184,7 @@ travelApp.init = function () {
     this.addStartButton();
     this.addFooterListener();
     this.addFormListener();
-    this.restartApp();
+    this.addRestartListener();
 }
 
 $(function () {
