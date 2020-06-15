@@ -365,6 +365,7 @@ html {
 }
 
 body {
+  position: relative;
   font-size: 1.4rem;
   background-image: url("../assets/bg-image.png");
   background-repeat: no-repeat;
@@ -378,7 +379,7 @@ body {
 
 @media only screen and (max-width: 1150px) {
   body {
-    margin: 100px 0;
+    padding: 100px 0;
   }
 }
 
@@ -485,20 +486,11 @@ body {
 }
 
 .modalContainer {
-  height: 100vh;
-  width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   z-index: 10;
   background-image: url("../assets/modal-bg1.png");
   background-color: #f6c346;
@@ -508,10 +500,11 @@ body {
 }
 
 .modalBox {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   text-align: center;
   width: 80%;
   max-width: 500px;
@@ -525,6 +518,12 @@ body {
 
 .modalBox h1 i {
   color: #95c8d8;
+}
+
+@media only screen and (max-width: 500px) {
+  .modalBox h1 {
+    font-size: 3.5rem;
+  }
 }
 
 .modalBox p {
@@ -868,7 +867,7 @@ body {
 
 footer {
   height: 3rem;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -880,7 +879,6 @@ footer {
 footer button {
   background-color: transparent;
   border: none;
-  cursor: pointer;
 }
 
 footer button:focus {
@@ -912,7 +910,7 @@ footer button:focus {
   border: none;
   position: fixed;
   top: 5%;
-  left: 95%;
+  left: 90%;
 }
 
 .attributionClose i {
@@ -933,11 +931,26 @@ footer button:focus {
 
 .attribution ul li {
   display: inline-block;
-  margin: 0.4rem 0;
+  margin: 0.4rem 0.8rem;
+}
+
+.attribution ul li a {
+  font-size: 2.5rem;
+  color: #525252;
+  text-shadow: 1px 1px 2px #95c8d8;
 }
 
 .attribution p {
   line-height: 2.2rem;
+}
+
+.attribution p a {
+  font-weight: bold;
+}
+
+.attribution .attributionCreatedBy {
+  border-top: 1px solid black;
+  margin: 10px 0;
 }
 
 .showAttribution {

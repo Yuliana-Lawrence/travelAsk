@@ -3,6 +3,7 @@ html {
 }
 
 body {
+  position: relative;
   @include fontSize(14);
   background-image: url("../assets/bg-image.png");
   background-repeat: no-repeat;
@@ -14,6 +15,6 @@ body {
   line-height: 1.2;
 
   @include tablet-landscape {
-    margin: 100px 0;
+    padding: 100px 0;
   }
 }
