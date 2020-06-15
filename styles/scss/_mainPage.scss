@@ -97,16 +97,17 @@
   }
 }
 
-.imageHolder {
-  display: flex;
-  justify-content: center;
-  align-self: flex-start;
-  border: 1px solid $accent-secondary;
-  border-radius: $radius;
-  opacity: 1;
-  overflow: hidden;
+.col50 {
+  &.imageHolder {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid $accent-secondary;
+    border-radius: $radius;
+    opacity: 1;
+    overflow: hidden;
+  }
 }
-
 .imageHolder img {
   display: block;
   object-fit: cover;

@@ -678,15 +678,16 @@ body {
   }
 }
 
-.imageHolder {
+.col50.imageHolder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   border: 1px solid #95c8d8;
   border-radius: 5px;
   opacity: 1;
