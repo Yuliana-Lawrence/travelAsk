@@ -879,6 +879,7 @@ footer {
 footer button {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 footer button:focus {
