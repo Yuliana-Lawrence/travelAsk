@@ -36,10 +36,15 @@ footer {
   position: fixed;
   top: 5%;
   left: 90%;
+
   i {
     @include fontSize(30);
     color: #fff;
     cursor: pointer;
+  }
+
+  @include phone {
+    left: 85%;
   }
 }
 
@@ -74,6 +79,10 @@ footer {
   .attributionCreatedBy {
     border-top: 1px solid black;
     margin: 10px 0;
+  }
+
+  @include phone {
+    padding: 1rem;
   }
 }
 
