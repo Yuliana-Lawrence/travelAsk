@@ -10,6 +10,7 @@ footer {
   button {
     background-color: transparent;
     border: none;
+    cursor: pointer;
 
     &:focus {
       border: 1px dotted red;
