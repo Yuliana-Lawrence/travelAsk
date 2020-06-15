@@ -100,6 +100,7 @@
 .imageHolder {
   display: flex;
   justify-content: center;
+  align-self: flex-start;
   border: 1px solid $accent-secondary;
   border-radius: $radius;
   opacity: 1;
@@ -109,6 +110,7 @@
 .imageHolder img {
   display: block;
   object-fit: cover;
+  min-height: 100%;
 }
 
 .mainCountryInfo {
